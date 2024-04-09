@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+
+    <h1>yRequstly</h1>
+    <input type="checkbox" name="switch" id="switch" checked>
+    <label for="switch">switch</label>
+
+    <div class="group-container">
+
+    </div>
+    <div id="group-template">
+      <div class="group">
+        <h2>
+          <input type="text" value="group 1 name" class="group-name"> <input class="group-checked" type="checkbox" checked>
+        </h2>
+        <div class="rule-container">
+        </div>
+      </div>
+    </div>
+    <div id="rule-template">
+      <div class="rule">
+        <input type="text" value="rule 1 name" class="rule-name">
+        <input type="checkbox" name="rule" id="rule" checked class="rule-checked">
+        <div>
+          
+          <div>
+            <input type="radio" class="method" name="method" checked>
+          <label>Post</label>
+          <input type="radio" class="method" name="method">
+          <label>Get</label>
+          </div>
+
+          <label for="rule">request url</label> <input id="match-url" type="text"> 
+          <div>
+            <input type="radio" class="rule-kind" name="radio" value="responseText" checked>
+            <label>replace response</label>
+            <input type="radio" class="rule-kind" name="radio" value="replacementUrl">
+            <label>replace url</label>
+            <input type="radio" class="rule-kind" name="radio" value="replacementMethod">
+            <label>replace method</label>
+            <input type="radio" class="rule-kind" name="radio" value="requestPayloadText">
+            <label>replace payload</label>
+            <input type="radio" class="rule-kind" name="radio" value="replacementStatusCode">
+            <label>replace status</label>
+          </div>
+          <div>mode: </div>
+          <input type="radio" class="replace-mode" value="function" name="replace">
+            <label>function</label>
+            <input type="radio" class="replace-mode" value="text" name="replace" checked>
+            <label>text</label>
+          <div>
+            <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
+      <button id="confirm">confirm</button>
+    <script src="./popup.js" type="module"></script>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "yRequestly",
+    "description": "tool of request",
+    "version": "1.0",
+    "author": "Yang zhou",
+    "icons": {
+      "16": "images/y16.png",
+      "32": "images/y32.png",
+      "48": "images/y48.png",
+      "128": "images/y128.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["content.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_start"
+        }
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "declarative_net_request": {
+        "rule_resources": []
+      },
+    "permissions": [
+        "storage",
+        "unlimitedStorage",
+        "declarativeNetRequest"
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": [
+            "scripts/yRequstly.js"
+          ],
+          "matches": [
+            "<all_urls>"
+          ]
+        }
+      ]
+}
